@@ -28,7 +28,7 @@ jobs:
         with:
           source_repo: "https://github.com/LXK9301/jd_scripts.git"
           source_branch: "master"
-          destination_branch: "main"
+          destination_branch: "master"
           github_token: ${{ secrets.PAT }}
       # 我自己同步到gitee使用，其他人可忽略
       - name: sync github -> gitee
@@ -36,7 +36,7 @@ jobs:
         if: env.dst_key
         with:
           src: github/LXK9301
-          dst: gitee/LXK9301
+          dst: gitee/lxk0301
           static_list: "jd_scripts"
           dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
           dst_token: ${{ secrets.GITEE_TOKEN }}
